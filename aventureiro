@@ -1,0 +1,83 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Carta {
+    char estado[3];
+    char codigo[4];
+    char nomeCidade[30];
+    unsigned long int populacao;
+    float area;
+    float pib;
+    int pontosTuristicos;
+};
+
+int main() {
+    struct Carta carta1, carta2;
+
+    printf("Digite o estado da Carta 1: ");
+    fflush(stdout);
+    scanf("%s", carta1.estado);
+
+    printf("Digite o código da Carta 1: ");
+    fflush(stdout);
+    scanf("%s", carta1.codigo);
+
+    printf("Digite o nome da cidade da Carta 1: ");
+    fflush(stdout);
+    scanf(" %[^\n]", carta1.nomeCidade);
+
+    printf("Digite a população da Carta 1: ");
+    fflush(stdout);
+    scanf("%lu", &carta1.populacao);
+
+    printf("Digite a área da Carta 1: ");
+    fflush(stdout);
+    scanf("%f", &carta1.area);
+
+    printf("Digite o PIB da Carta 1: ");
+    fflush(stdout);
+    scanf("%f", &carta1.pib);
+
+    printf("Digite o número de pontos turísticos da Carta 1: ");
+    fflush(stdout);
+    scanf("%d", &carta1.pontosTuristicos);
+
+    printf("\n--- Agora vamos para a Carta 2 ---\n");
+
+    printf("Digite o estado da Carta 2: ");
+    fflush(stdout);
+    scanf("%s", carta2.estado);
+
+    printf("Digite o código da Carta 2: ");
+    fflush(stdout);
+    scanf("%s", carta2.codigo);
+
+    printf("Digite o nome da cidade da Carta 2: ");
+    fflush(stdout);
+    scanf(" %[^\n]", carta2.nomeCidade);
+
+    printf("Digite a população da Carta 2: ");
+    fflush(stdout);
+    scanf("%lu", &carta2.populacao);
+
+    printf("Digite a área da Carta 2: ");
+    fflush(stdout);
+    scanf("%f", &carta2.area);
+
+    printf("Digite o PIB da Carta 2: ");
+    fflush(stdout);
+    scanf("%f", &carta2.pib);
+
+    printf("Digite o número de pontos turísticos da Carta 2: ");
+    fflush(stdout);
+    scanf("%d", &carta2.pontosTuristicos);
+
+    // Exibição resumida
+    printf("\nCarta 1 - %s (%s): População %lu, Área %.2f, PIB %.2f, Pontos %d\n",
+           carta1.nomeCidade, carta1.estado, carta1.populacao, carta1.area, carta1.pib, carta1.pontosTuristicos);
+
+    printf("Carta 2 - %s (%s): População %lu, Área %.2f, PIB %.2f, Pontos %d\n",
+           carta2.nomeCidade, carta2.estado, carta2.populacao, carta2.area, carta2.pib, carta2.pontosTuristicos);
+
+    return 0;
+}
